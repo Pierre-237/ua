@@ -55,7 +55,7 @@ def predict_fraud(transaction: Transaction):
     prediction = model.predict(input_df)[0]
     proba = model.predict_proba(input_df)[0][1]
 
-    message = "Cette transaction est frauduleuse 🚨" if prediction == 1 else "Transaction légitime ✅"
+    message = "Cette transaction est frauduleuse 🚨" if prediction == 1 else "Transaction Légitime ✅"
 
     return {
         "isFraud": int(prediction),
